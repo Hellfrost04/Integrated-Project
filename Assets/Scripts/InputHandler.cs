@@ -75,7 +75,7 @@ namespace IP
         private void HandleAttackInput(float delta)
         {
             inputActions.PlayerActions.LightAttack.performed += i => LightAttack_Input = true;
-            inputActions.PlayerActions.LightAttack.performed += i => HeavyAttack_Input = true;
+            inputActions.PlayerActions.HeavyAttack.performed += i => HeavyAttack_Input = true;
 
             if (LightAttack_Input)
             {

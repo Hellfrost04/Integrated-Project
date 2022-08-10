@@ -8,6 +8,8 @@ namespace IP
     {
         WeaponHolderSlot rightHandSlot;
 
+        DamageCollider rightDamageCollider;
+
         private void Awake()
         {
             WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
@@ -22,8 +24,23 @@ namespace IP
 
         public void LoadWeaponOnSlot(WeaponItem weaponItem)
         {
-         rightHandSlot.LoadWeaponModel(weaponItem);
-       
+            rightHandSlot.LoadWeaponModel(weaponItem);
+            LoadDamageCollider();
+        }
+
+        private void LoadDamageCollider()
+        {
+            rightDamageCollider = rightHandSlot.currentWeaponModel.GetComponentInChildren<DamageCollider>();
+        }
+
+        public void OpenDamageCollider()
+        {
+            rightDamageCollider.EnableDamageCollider();
+        }
+
+        public void CloseDamageCollider()
+        {
+            rightDamageCollider.DisaleDamageCollider();
         }
     }
 }
