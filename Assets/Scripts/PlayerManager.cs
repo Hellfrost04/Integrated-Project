@@ -60,6 +60,7 @@ namespace IP
             inputHandler.rollFlag = false;
             inputHandler.LightAttack_Input = false;
             inputHandler.HeavyAttack_Input = false;
+            inputHandler.pauseInput = false;
 
             if (inAir)
             {
