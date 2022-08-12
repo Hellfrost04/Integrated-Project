@@ -69287,6 +69287,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1129513433795098962, guid: d5d3843fdb4ba3e46b0635ef2f880ddf,
+        type: 3}
+      propertyPath: lookSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 1170799361909028296, guid: d5d3843fdb4ba3e46b0635ef2f880ddf,
         type: 3}
       propertyPath: fallSpeed
@@ -69296,6 +69301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: groundDistance
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170799361909028302, guid: d5d3843fdb4ba3e46b0635ef2f880ddf,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1170799361909028303, guid: d5d3843fdb4ba3e46b0635ef2f880ddf,
         type: 3}

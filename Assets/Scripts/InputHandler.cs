@@ -40,6 +40,8 @@ namespace IP
                 inputActions = new PlayerControls();
                 inputActions.PlayerMovement.Movement.performed += inputActions => movementInput = inputActions.ReadValue<Vector2>();
                 inputActions.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
+                inputActions.PlayerActions.LightAttack.performed += i => LightAttack_Input = true;
+                inputActions.PlayerActions.HeavyAttack.performed += i => HeavyAttack_Input = true;
             }
 
             inputActions.Enable();
@@ -79,9 +81,6 @@ namespace IP
 
         private void HandleAttackInput(float delta)
         {
-            inputActions.PlayerActions.LightAttack.performed += i => LightAttack_Input = true;
-            inputActions.PlayerActions.HeavyAttack.performed += i => HeavyAttack_Input = true;
-
             if (LightAttack_Input)
             {
                 playerAttacker.HandleLightAttack(playerInventory.rightWeapon);

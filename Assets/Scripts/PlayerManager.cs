@@ -40,19 +40,15 @@ namespace IP
             isInteracting = animator.GetBool("isInteracting");
 
             inputHandler.TickInput(delta);
-            player.HandleMovement(delta);
+
             player.HandleRollAndSprint(delta);
-            player.HandleFalling(delta, player.moveDirection);
         }
+
         private void FixedUpdate()
         {
             float delta = Time.deltaTime;
-
-            if (cameraHandler != null)
-            {
-                cameraHandler.FollowTarget(delta);
-                cameraHandler.HandleCameraRotation(delta, inputHandler.mouseX, inputHandler.mouseY);
-            }
+            player.HandleMovement(delta);
+            player.HandleFalling(delta, player.moveDirection);
         }
 
         private void LateUpdate()
@@ -61,6 +57,14 @@ namespace IP
             inputHandler.LightAttack_Input = false;
             inputHandler.HeavyAttack_Input = false;
             inputHandler.pauseInput = false;
+
+            float delta = Time.deltaTime;
+
+            if (cameraHandler != null)
+            {
+                cameraHandler.FollowTarget(delta);
+                cameraHandler.HandleCameraRotation(delta, inputHandler.mouseX, inputHandler.mouseY);
+            }
 
             if (inAir)
             {
