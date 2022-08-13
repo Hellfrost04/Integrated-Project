@@ -71001,10 +71001,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combatStanceState: {fileID: 399084141}
   enemyAttacks:
-  - {fileID: 11400000, guid: 6d4f03ef05554e84985ff3495104e56d, type: 2}
-  - {fileID: 11400000, guid: fd18ba8a9bdbd6e46bbfe03b464bb1d8, type: 2}
-  - {fileID: 11400000, guid: ded9b8b07f3bb244e9b07003cc4bfb3c, type: 2}
-  - {fileID: 11400000, guid: 2d6aac867e69aaa4f8129ad678d26b05, type: 2}
+  - {fileID: 11400000, guid: 93808c75f8d90da4e83447299ff8fe02, type: 2}
+  - {fileID: 11400000, guid: 9d565ebbd8513374fa30afb89039295c, type: 2}
+  - {fileID: 11400000, guid: 4f605a8ce2a2d624fa9fd436c839c7f0, type: 2}
+  - {fileID: 11400000, guid: 130ae325e868a33419f571ec02b443a4, type: 2}
   currentAttack: {fileID: 0}
 --- !u!43 &1151078839
 Mesh:

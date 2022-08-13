@@ -49,6 +49,12 @@ namespace IP
             HandleRecoveryTimer();
 
             isInteracting = enemyAnimationManager.anim.GetBool("isInteracting");
+
+            if(enemyStats.currentHealth <= 0)
+            {
+                isInteracting = true;
+                isPreformingAction = true;
+            }
         }
 
         private void FixedUpdate()
