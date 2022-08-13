@@ -6,12 +6,11 @@ namespace IP
 {
     public class PlayerStats : CharacterStats
     {
-        HealthBar healthBar;
+        public HealthBar healthBar;
         AnimationHandler animationHandler;
 
         private void Awake()
         {
-            healthBar = FindObjectOfType<HealthBar>();
             animationHandler = GetComponentInChildren<AnimationHandler>();
         }
 
@@ -20,18 +19,18 @@ namespace IP
             maxHealth = SetMaxHealth();
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
-            healthBar.SetCurrentHealth(currentHealth);
         }
 
         private int SetMaxHealth()
         {
-            maxHealth = healthLevel * 2;
+            maxHealth = healthLevel * 10;
             return maxHealth;
         }
 
         public void TakeDamage(int damage)
         {
             currentHealth = currentHealth - damage;
+
             healthBar.SetCurrentHealth(currentHealth);
 
             if(currentHealth <= 0)

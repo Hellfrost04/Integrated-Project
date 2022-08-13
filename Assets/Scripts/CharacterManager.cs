@@ -6,8 +6,6 @@ namespace IP
 {
     public class CharacterManager : MonoBehaviour
     {
-        public int healthLevel = 10;
-        public int maxHealth;
-        public int currentHealth;
+
     }
 }
