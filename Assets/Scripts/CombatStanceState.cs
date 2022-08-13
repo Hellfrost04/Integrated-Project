@@ -6,14 +6,30 @@ namespace IP
 {
     public class CombatStanceState : State
     {
+        public AttackState attackState;
+        public PursueTargetState pursueTargetState;
         public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
         {
-            //Check for attack range
+            float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
             //potentially circle player or walk around them
-            //if in attack range return attack State
-            //if we are in a cool down after attacking, return this state and continue circling player
-            //if the player runs out of range return the pursuetarget state
-            return this;
+
+            if (enemyManager.isPreformingAction)
+            {
+                enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime);
+            }
+
+            if (enemyManager.currentRecoveryTime <= 0 && distanceFromTarget <= enemyManager.maximumAttackRange)
+            {
+                return attackState;
+            }
+            else if (distanceFromTarget > enemyManager.maximumAttackRange)
+            {
+                return pursueTargetState;
+            }
+            else
+            {
+                return this;
+            }
         }
     }
 }
