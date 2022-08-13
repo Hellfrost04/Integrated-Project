@@ -4,17 +4,14 @@ using UnityEngine;
 
 namespace IP
 {
-    public class PlayerStats : MonoBehaviour
+    public class PlayerStats : CharacterStats
     {
-        public int healthLevel = 10;
-        public int maxHealth;
-        public int currentHealth;
-
-        public HealthBar healthBar;
+        HealthBar healthBar;
         AnimationHandler animationHandler;
 
         private void Awake()
         {
+            healthBar = FindObjectOfType<HealthBar>();
             animationHandler = GetComponentInChildren<AnimationHandler>();
         }
 
@@ -23,6 +20,7 @@ namespace IP
             maxHealth = SetMaxHealth();
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetCurrentHealth(currentHealth);
         }
 
         private int SetMaxHealth()
@@ -34,7 +32,6 @@ namespace IP
         public void TakeDamage(int damage)
         {
             currentHealth = currentHealth - damage;
-
             healthBar.SetCurrentHealth(currentHealth);
 
             if(currentHealth <= 0)
