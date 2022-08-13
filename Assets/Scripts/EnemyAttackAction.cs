@@ -8,12 +8,12 @@ namespace IP
     public class EnemyAttackAction : EnemyAction
     {
         public int attackScore = 3;
-        public float recoveryTime = 2;
+        public float recoveryTime = 0;
 
-        public float maximumAttackAngle = 35;
-        public float minimumAttackAngle = -35;
+        public float maximumAttackAngle = 360;
+        public float minimumAttackAngle = -360;
 
         public float minimumDistanceNeededToAttack = 0;
-        public float maximumDistanceNeededToAttack = 3;
+        public float maximumDistanceNeededToAttack = 11;
     }
 }

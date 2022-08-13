@@ -25,6 +25,7 @@ namespace IP
                 //If we are too close to the enemy to preform current attack, get a new attack
                 if(distanceFromTarget < currentAttack.minimumDistanceNeededToAttack)
                 {
+                    Debug.Log("Too close");
                     return this;
                 }
                 //If we are close enough to attack, then let us proceed
@@ -34,6 +35,7 @@ namespace IP
                     if (viewableAngle <= currentAttack.maximumAttackAngle &&
                         viewableAngle >= currentAttack.minimumAttackAngle)
                     {
+                        Debug.Log("Within range");
                         if (enemyManager.currentRecoveryTime <= 0 && enemyManager.isPreformingAction == false)
                         {
                             enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime);
@@ -50,6 +52,7 @@ namespace IP
             }
             else
             {
+                Debug.Log("Get new attack");
                 GetNewAttack(enemyManager);
             }
 
@@ -74,7 +77,8 @@ namespace IP
                     if (viewableAngle <= enemyAttackAction.maximumAttackAngle
                     && viewableAngle >= enemyAttackAction.minimumAttackAngle)
                     {
-                    maxScore += enemyAttackAction.attackScore;
+                        Debug.Log("Max score");
+                        maxScore += enemyAttackAction.attackScore;
                     }
                 }
             }
@@ -100,6 +104,7 @@ namespace IP
 
                         if (temporaryScore > randomValue)
                         {
+                            Debug.Log("attack got");
                             currentAttack = enemyAttackAction;
                         }
                     }

@@ -11,7 +11,7 @@ namespace IP
         public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
         {
             float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
-            //potentially circle player or walk around them
+            //definitely circle player or walk around them
 
             if (enemyManager.isPreformingAction)
             {
