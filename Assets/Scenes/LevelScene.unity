@@ -67130,7 +67130,11 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: bb0739e18a32cfd4abd3a4963ef658b2, type: 3}
       propertyPath: m_Controller
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 9100000, guid: 01edd63cdff07e249bc3c0399530efdc, type: 2}
+=======
+      objectReference: {fileID: 9100000, guid: c3cb2d9f3790d9a48a572eb9e9488d5f, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 13700000, guid: bb0739e18a32cfd4abd3a4963ef658b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -80724,7 +80728,7 @@ GameObject:
   - component: {fileID: 1866788124}
   m_Layer: 0
   m_Name: GoldKnightEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80824,6 +80828,9 @@ MonoBehaviour:
   detectionLayer:
     serializedVersion: 2
     m_Bits: 8
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!43 &1881973916
 Mesh:
