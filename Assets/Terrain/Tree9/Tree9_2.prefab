@@ -96,14 +96,17 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!21 &2129798
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Leaf Material
   m_Shader: {fileID: 4800000, guid: 0f4122b9a743b744abe2fb6a0a88868b, type: 3}
-  m_ShaderKeywords: BACKFACE_NORMAL_MODE_MIRROR _WINDQUALITY_BEST
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - BACKFACE_NORMAL_MODE_MIRROR
+  - _WINDQUALITY_BEST
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -191,14 +194,17 @@ Material:
   m_BuildTextureStacks: []
 --- !u!21 &2187698
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Bark Material
   m_Shader: {fileID: 4800000, guid: 0f4122b9a743b744abe2fb6a0a88868b, type: 3}
-  m_ShaderKeywords: BACKFACE_NORMAL_MODE_MIRROR _WINDQUALITY_BEST
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - BACKFACE_NORMAL_MODE_MIRROR
+  - _WINDQUALITY_BEST
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

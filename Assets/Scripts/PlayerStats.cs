@@ -32,7 +32,7 @@ namespace IP
 
         public void TakeDamage(int damage)
         {
-            if (playerManager.isInvulerable)
+            if (playerManager.isInvulnerable)
             {
                 return;
             }
