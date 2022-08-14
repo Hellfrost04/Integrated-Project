@@ -17,6 +17,7 @@ namespace IP
 
         public bool inAir;
         public bool isGrounded;
+        public bool isInvulerable;
 
 
         private void Awake()
@@ -51,6 +52,8 @@ namespace IP
             inputHandler.TickInput(delta);
 
             player.HandleRollAndSprint(delta);
+
+            isInvulerable = animator.GetBool("isInvulnerable");
         }
 
         private void FixedUpdate()

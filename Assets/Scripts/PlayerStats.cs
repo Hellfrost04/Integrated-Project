@@ -6,11 +6,14 @@ namespace IP
 {
     public class PlayerStats : CharacterStats
     {
+        PlayerManager playerManager;
         public HealthBar healthBar;
         AnimationHandler animationHandler;
 
         private void Awake()
         {
+            playerManager = GetComponent<PlayerManager>();
+
             animationHandler = GetComponentInChildren<AnimationHandler>();
         }
 
@@ -29,6 +32,10 @@ namespace IP
 
         public void TakeDamage(int damage)
         {
+            if (playerManager.isInvulerable)
+            {
+                return;
+            }
             if (isDead)
             {
                 return;
