@@ -3200,10 +3200,12 @@ MonoBehaviour:
 
     Look: Mouse
 
-    Interact: Left click
+    Attack: Left/Right
+    click
 
-    Pause:
-    Escape'
+    Roll: L.Shift
+
+    Pause: Escape'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4297,14 +4299,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game: Frazer
-
-
-    Music: Karl Casey(White Bat Audio)
-
-
-    SFX: Space
-    coin win notification(Mixkit.co)'
+  m_text: "Game: Frazer, Eron, JiaHua\n\nMusic: Medieval Action Music No Copyright
+    \n Celtic Medieval Fantasy \nEPIC MUSIC NO COPYRIGHT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
