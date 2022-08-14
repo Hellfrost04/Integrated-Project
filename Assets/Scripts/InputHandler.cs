@@ -23,6 +23,7 @@ namespace IP
         PlayerControls inputActions;
         PlayerAttacker playerAttacker;
         PlayerInventory playerInventory;
+        AnimationHandler animationHandler;
 
         Vector2 movementInput;
         Vector2 cameraInput;
@@ -31,6 +32,7 @@ namespace IP
         {
             playerAttacker = GetComponent<PlayerAttacker>();
             playerInventory = GetComponent<PlayerInventory>();
+            animationHandler = GetComponentInChildren<AnimationHandler>();
         }
 
         public void OnEnable()

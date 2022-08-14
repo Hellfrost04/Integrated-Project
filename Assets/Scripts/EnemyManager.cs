@@ -50,10 +50,10 @@ namespace IP
 
             isInteracting = enemyAnimationManager.anim.GetBool("isInteracting");
 
-            if(enemyStats.currentHealth <= 0)
+            if(enemyStats.isDead == true)
             {
-                isInteracting = true;
                 isPreformingAction = true;
+                isInteracting = true;
             }
         }
 

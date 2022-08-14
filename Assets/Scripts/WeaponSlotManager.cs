@@ -6,16 +6,19 @@ namespace IP
 {
     public class WeaponSlotManager : MonoBehaviour
     {
+        PlayerManager playerManager;
+
         WeaponHolderSlot rightHandSlot;
 
         DamageCollider rightDamageCollider;
 
         private void Awake()
         {
+            playerManager = GetComponentInParent<PlayerManager>();
             WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
             foreach (WeaponHolderSlot weaponSlot in weaponHolderSlots)
             {
-                if(weaponSlot.isRightHandSlot)
+                if (weaponSlot.isRightHandSlot)
                 {
                     rightHandSlot = weaponSlot;
                 }

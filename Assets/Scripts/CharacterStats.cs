@@ -9,5 +9,7 @@ namespace IP
         public int healthLevel = 10;
         public int maxHealth;
         public int currentHealth;
+
+        public bool isDead;
     }
 }

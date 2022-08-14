@@ -10,6 +10,7 @@ namespace IP
         Animator animator;
         CameraHandler cameraHandler;
         Player player;
+        PlayerStats playerStats;
 
 
         public bool isInteracting;
@@ -21,6 +22,7 @@ namespace IP
         private void Awake()
         {
             cameraHandler = FindObjectOfType<CameraHandler>();
+            playerStats = GetComponent<PlayerStats>();
         }
 
 
@@ -35,6 +37,13 @@ namespace IP
         // Update is called once per frame
         void Update()
         {
+            if(playerStats.isDead == true)
+            {
+                isInteracting = true;
+                inputHandler.LightAttack_Input = false;
+                inputHandler.HeavyAttack_Input = false;
+            }
+
             float delta = Time.deltaTime;
 
             isInteracting = animator.GetBool("isInteracting");

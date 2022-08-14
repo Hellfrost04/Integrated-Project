@@ -4,11 +4,8 @@ using UnityEngine;
 
 namespace IP
 {
-    public class EnemyStats : MonoBehaviour
+    public class EnemyStats : CharacterStats
     {
-        public int healthLevel = 10;
-        public int maxHealth;
-        public int currentHealth;
 
         Animator animator;
 
@@ -31,12 +28,17 @@ namespace IP
 
         public void TakeDamage(int damage)
         {
+            if (isDead)
+            {
+                return;
+            }
             currentHealth = currentHealth - damage;
 
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 animator.Play("Death");
+                isDead = true;
             }
         }
     }
